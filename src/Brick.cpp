@@ -13,12 +13,12 @@ Brick::Brick(){
     Brick_png = al_load_bitmap("lava.png");
     if(!Brick_png)
         cout << "Error at creation of the brick!!" << endl;
-        
+
     else
         cout << "Sucess! Brick was already creted!" << endl;
 }
 
-void Brick::createBrick(int matriz[18][15]){
+void Brick::createBrick(int matriz[18][15]){ //Cria o bloco
                     
     for(int i=0; i<18; i++){
         for(int j=0;j<15;j++){

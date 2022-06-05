@@ -13,3 +13,5 @@ Main.o: Map.h Brick.h Ruby.h Main.cpp
 
 clean:
 	rm *.o *.exe
+
+## Makefile feito pra linux apenas 
