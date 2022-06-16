@@ -18,10 +18,10 @@ Brick::Brick(){
         cout << "Sucess! Brick was already creted!" << endl;
 }
 
-void Brick::createBrick(int matriz[18][15]){ //Cria o bloco
+void Brick::createBrick(int matriz[18][21]){ //Cria o bloco
                     
     for(int i=0; i<18; i++){
-        for(int j=0;j<15;j++){
+        for(int j=0;j<21;j++){ //percorre apenas o espaço do mapa
 
             if (matriz[i][j] == 1)
                 al_draw_bitmap(Brick_png, (40*j), (40*i), 0);

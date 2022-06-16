@@ -18,7 +18,7 @@ Ruby::Ruby(){
 
 }
 
-void Ruby::createRuby(int matriz[18][15]){
+void Ruby::createRuby(int matriz[18][21]){
 
     for(int i=0; i<18; i++){
         for(int j=0; j<15; j++){
