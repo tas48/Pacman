@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Map::Map(){
+Map::Map(){ //padrão
 
     screen = NULL;
     if(!screen){
@@ -16,6 +16,8 @@ Map::Map(){
     else   
         cout << "Error! Screen wasn't created!" << endl;
 }
+
+Map::~Map(){ }
 
 void Map::setScreen(int height, int width){
 

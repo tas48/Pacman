@@ -7,7 +7,9 @@ class Ruby{
     public:
 
         Ruby();
-        void createRuby(int matriz[18][21]);
+        ~Ruby();
+
+        void createRuby(int matriz[18][22]);
         void destroyRuby();
 
     private:

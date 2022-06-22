@@ -6,6 +6,7 @@ class Map{
 
     public:
         Map();
+        ~Map();
         void setScreen(int height, int width);
         void destroyScreen();
 

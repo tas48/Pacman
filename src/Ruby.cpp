@@ -18,7 +18,9 @@ Ruby::Ruby(){
 
 }
 
-void Ruby::createRuby(int matriz[18][21]){
+Ruby::~Ruby(){ }
+
+void Ruby::createRuby(int matriz[18][22]){
 
     for(int i=0; i<18; i++){
         for(int j=0; j<15; j++){
@@ -28,11 +30,12 @@ void Ruby::createRuby(int matriz[18][21]){
             }
         }
     }
-
     al_flip_display();
-
 }
 
 void Ruby::destroyRuby(){
     al_destroy_bitmap(redRuby_png);
 }
+
+
+

@@ -8,38 +8,30 @@ using namespace std;
 
 Score::Score(){
 
-    //painel score estático
-    scorePanel_png = NULL;
-    scorePanel_png = al_load_bitmap("score.png");
-
-    if(!scorePanel_png)
-        cout << "Error at creation of the score panel!!" << endl;
-
-    else  
-        cout << "Sucess! Score panel created!" << endl;
-
-
-    //pontuação do jogador;
     score_png = NULL;
-} 
+    score_png = al_load_bitmap("score/0.png");
 
-void Score::createScore(int matriz[18][21]){ //cria a imagem estática score
+    if(!score_png)
+        cout << "Error at creation of the game score!!" << endl;
+    else  
+        cout << "Sucess! The game score was created!" << endl;
+}   
 
-    for(int i=0; i<18; i++){
-        for(int j=0; j<20; j++){ // percorre espaço além do tabuleiro
+Score::~Score(){}
 
-            if(matriz[i][j] == 5) //desenha o painel score
-                al_draw_bitmap(scorePanel_png, (40*j), (40*i), 0);
-            
-            if(matriz[i][j] == 4){
-                score_png = al_load_bitmap("numbers/0.png");
+void Score::createScore(int matriz[18][22]){ //cria o placar inicial zerado
+
+    for(int i=0; i<18; i++){ //inicializa as unidade, dezena, centena e milhar do placar com 0
+        for(int j=0; j<22; j++){ 
+
+            if(matriz[i][j] == 4 || matriz[i][j] == 5 || matriz[i][j] == 6 || matriz[i][j] == 7){
                 al_draw_bitmap(score_png, (40*j), (40*i), 0);
             }
         }
     }
+    al_flip_display();
 }
 
 void Score::destroyScore(){
-    al_destroy_bitmap(scorePanel_png);
     al_destroy_bitmap(score_png);
 }

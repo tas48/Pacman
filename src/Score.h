@@ -2,17 +2,17 @@
 #ifndef SCORE_H
 #define SCORE_H
 
-class Score{
+class Score{   
 
     public:
         Score(); //construtor
-        void createScore(int matriz[18][21]);
+        ~Score();//destrutor
+
+        void createScore(int[18][22]);
         void destroyScore();
+        //void changeScore(int, int[18][22]);
 
     private:
-        ALLEGRO_BITMAP* scorePanel_png;
-        ALLEGRO_BITMAP* score_png; 
+        ALLEGRO_BITMAP* score_png;
 };
-
-
 #endif

@@ -7,7 +7,8 @@ class Brick{
     public:
 
         Brick();
-        void createBrick(int matriz[18][21]);
+        ~Brick();
+        void createBrick(int matriz[18][22]);
         void destroyBrick();
 
     private:
